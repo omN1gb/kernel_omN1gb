@@ -391,8 +391,7 @@ static int power_suspend_late(struct device *dev)
 	if (debug_mask & DEBUG_SUSPEND)
 		pr_info("power_suspend_late return %d\n", ret);
 
-	if (ret == 0)
-		msm_suspend_check_done = 1;
+	msm_suspend_check_done = 1;
 	return ret;
 }
 
